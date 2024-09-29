@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pemesanan\nTiket Kereta"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:paddingBottom="24dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="   Nama Pemesan"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/namaPemesan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:layout_marginBottom="20dp"
+            android:drawableStart="@drawable/profile" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/jamKeberangkatan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="    Jam Keberangkatan"
+        android:drawableStart="@drawable/clock"
+        android:textAlignment="viewStart"
+        android:backgroundTint="@color/white"
+        android:textColor="@android:color/darker_gray"
+        android:layout_marginBottom="20dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/tanggalKeberangkatan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="   Tanggal Keberangkatan"
+        android:drawableStart="@drawable/calendar"
+        android:textAlignment="viewStart"
+        android:backgroundTint="@color/white"
+        android:textColor="@android:color/darker_gray"
+        android:layout_marginBottom="20dp"
+        android:onClick="showDatePicker"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/shape"
+        android:padding="8dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/location"
+            android:layout_marginEnd="8dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerTujuan"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="TouchTargetSizeCheck" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_pesan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pesan Tiket"
+        android:layout_marginTop="48dp"
+        android:textColor="@android:color/white"/>
+
+
+
+</LinearLayout>

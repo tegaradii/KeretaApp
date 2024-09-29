@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">KeretaApp</string>
+    <string-array name="tujuan">
+        <item>Jakarta</item>
+        <item>Yogyakarta</item>
+        <item>Banyumas</item>
+        <item>Surabaya</item>
+    </string-array>
+</resources>
